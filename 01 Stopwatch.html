@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="01 Stopwatch.css">
+</head>
+<body>
+  <script src="01 Stopwatch.js"></script>
+
+<!-- sidebar for switch to capture pg, time calculator, analog -->  
+<!-- calculator & analog ver optional, must incl capture pg -->
+
+<!-- MARK: pick color palette -->
+  <div class="center" id="Colors">
+    <button class="colorPalette" id="circle1"></button>
+    <button class="colorPalette" id="circle2"></button>
+    <button class="colorPalette" id="circle3"></button>
+    <button class="colorPalette" id="circle4"></button>
+    <button class="colorPalette" id="circle5"></button>
+    <button class="colorPalette" id="circle6"></button>
+    <button class="colorPalette" id="circle7"></button>
+    <button class="colorPalette" id="circle8"></button>
+  </div>
+
+
+<!-- MARK: stopwatch display -->
+    <div class="center" id="stopwatch">
+      <div> 
+        <span class="digit" id="hr"> 
+          00</span> 
+        <span class="txt">Hr</span> 
+        <span class="digit" id="min"> 
+          00</span> 
+        <span class="txt">Min</span> 
+        <span class="digit" id="sec"> 
+          00</span> 
+        <span class="txt">Sec</span> 
+    </div> 
+      </div>
+    </div>
+  </div>
+
+
+<!-- MARK: buttons -->
+  <div>
+    <div class="center">
+    <button class="timerBtn" id="PlayPauseBtn" onclick="change()" title="Play/Pause Stopwatch" value="Play">
+      <svg id="Play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.78 22.7">
+        <path d="M7.48,4.62V27.33L26.25,14.47Z" 
+        transform="translate(-7.48 -4.62)"/>
+      </svg> 
+      <svg id="Pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.77 23.53">
+        <rect width="5.07" height="23.53"/>
+        <rect x="12.7" width="5.07" height="23.53"/>
+      </svg>
+      <span class="BtnText">Play</span>
+    </button>
+    </div>
+    
+    <div class="center">
+      <a href="02 Capture duration.html">
+        <button class="timerBtn" id="CapturePg" title="To Capture Pg">
+          <svg id="CapturePgSvg" xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 22.33 27.85">
+            <rect x="0.5" y="0.5" width="21.33" height="26.85" 
+            style="stroke-miterlimit:10"/>
+            <line x1="0.5" y1="7.18" x2="21.83" y2="7.18" 
+            style="stroke-linecap:round"/>
+            <line x1="0.5" y1="13.93" x2="21.83" y2="13.93" 
+            style="stroke-linecap:round"/>
+            <line x1="0.5" y1="20.68" x2="21.83" y2="20.68" 
+            style="stroke-linecap:round"/>
+            <line x1="14.86" y1="7.18" x2="14.86" y2="27.35" 
+            style="stroke-linecap:round"/>
+            <line x1="7.68" y1="7.18" x2="7.68" y2="27.35" 
+            style="stroke-linecap:round"/>
+            <rect x="0.5" y="0.5" width="21.33" height="26.85" 
+            style="stroke-linecap:round; stroke-linejoin:round"/>
+          </svg>
+          <span class="BtnText">Capture<br>Page</span>
+        </button></a>
+
+      <button class="timerBtn" id="CaptureDurationBtn" title="Capture Current Duration">
+        <svg id="Capture" xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 18.73 18.77">
+          <circle cx="9.36" cy="9.23" r="4.91"/>
+          <line x1="18.23" y1="18.27" x2="13.14" y2="18.27" 
+          style="stroke-linecap:round"/>
+          <line x1="18.23" y1="13.18" x2="18.23" y2="18.27" 
+          style="stroke-linecap:round"/>
+          <line x1="18.23" y1="0.5" x2="18.23" y2="5.59" 
+          style="stroke-linecap:round"/>
+          <line x1="13.14" y1="0.5" x2="18.23" y2="0.5" 
+          style="stroke-linecap:round"/>
+          <line x1="0.5" y1="18.27" x2="0.5" y2="13.18" 
+          style="stroke-linecap:round"/>
+          <line x1="5.59" y1="18.27" x2="0.5" y2="18.27" 
+          style="stroke-linecap:round"/>
+          <line x1="0.5" y1="0.5" x2="5.59" y2="0.5" 
+          style="stroke-linecap:round"/>
+          <line x1="0.5" y1="5.59" x2="0.5" y2="0.5" 
+          style="stroke-linecap:round"/>
+          <line x1="9.36" y1="5.41" x2="9.36" y2="9.23" 
+          style="stroke-linecap:round;stroke-width:0.5px"/>
+          <line x1="8.13" y1="6.61" x2="9.35" y2="5.4" 
+          style="stroke-linecap:round;stroke-width:0.5px"/>
+          <line x1="10.58" y1="6.61" x2="9.36" y2="5.4" 
+          style="stroke-linecap:round;stroke-width:0.5px"/>
+          <line x1="12.06" y1="11.92" x2="9.36" y2="9.22" 
+          style="stroke-linecap:round;stroke-width:0.5px"/>
+          <line x1="12.08" y1="10.41" x2="12.08" y2="11.92" 
+          style="stroke-linecap:round;stroke-width:0.5px"/>
+          <line x1="10.56" y1="11.93" x2="12.07" y2="11.93" 
+          style="stroke-linecap:round;stroke-width:0.5px"/>
+        </svg>
+        <span class="BtnText">Capture<br>Duration</span>
+      </button>
+
+      <button class="timerBtn" id="ResetStopwatchBtn" title="Reset Stopwatch">
+        <svg id="Reset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.91 21.6">
+          <path d="M8.5,18.22a8,8,0,1,0,2.22-7.11" 
+          transform="translate(-8 -3.71)" 
+          style="stroke-linecap:round"/>
+          <line x1="2.32" y1="7.27" x2="8.89" y2="9.78" 
+          style="stroke-linecap:round"/>
+          <line x1="2.32" y1="7.27" x2="4.91" y2="0.5" 
+          style="stroke-linecap:round"/>
+        </svg>
+        <span class="BtnText">Reset<br>Stopwatch</span>
+      </button>
+    </div>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'Blogger_Sans';
+  src: url(Blogger_Sans.otf);
+}
+
+* {
+  font-family: Blogger_Sans, sans-serif;
+  font-size: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  padding-top: 1rem;
+  margin: auto;
+  max-width: 50rem;
+}
+
+/* MARK: colors */
+
+.colorPalette {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 5rem;
+  border-color: white;
+  border-width: .3rem;
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.colorPalette:hover {
+  opacity: 60%;
+}
+
+.colorPalette:focus {
+  border-color: black;
+}
+
+#circle1 {
+  background-color: #6F7885;
+}
+#circle2 {
+  background-color: #EE5E99;
+}
+#circle3 {
+  background-color: #B660E0;
+}
+#circle4 {
+  background-color: #5F55EE;
+}
+#circle5 {
+  background-color: #4466FF;
+}
+#circle6 {
+  background-color: #2F8DCC;
+}
+#circle7 {
+  background-color: #E16B16;
+}
+#circle8 {
+  background-color: #64C6A2;
+}
+
+/* MARK: display */
+
+#stopwatch{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  color: #6F7885;
+}
+
+.digit {
+  font-size: 1250%;
+}
+
+.txt {
+  font-size: 200%;
+}
+
+#sec {
+  font-size: 750%;
+}
+
+/* MARK: Buttons*/
+
+button {
+  background-color: white;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 4px;
+  font-size: 150%;
+  height: 5rem;
+  width: 12.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  transition-duration: 250ms;
+  
+}
+
+.timerBtn {
+  display: inline-flex;
+  padding: 1rem 1rem;
+  margin: 0rem 2rem;
+  text-align: left;
+}
+
+.timerBtn:hover {
+  box-shadow: 0 8px 16px 0 lightgrey, 0 6px 20px 0 lightgrey;
+}
+
+#PlayPauseBtn {
+  font-size: 300%;
+  font-weight: bold;
+  color: #0C8140;
+  border-color: #0C8140;
+  padding: 1.25rem 2rem;
+  margin-bottom: 2rem;
+  width: 20rem;
+  height: auto;
+}
+
+#PlayPauseBtn:focus{
+  background-color: #0C8140;
+  color: white;
+}
+
+#CapturePg,
+#CaptureDurationBtn, 
+#ResetStopwatchBtn {
+  color: #2F8DCC;
+  border-color: #2F8DCC; 
+}
+
+#ResetStopwatchBtn:focus,
+#CapturePg:focus,
+#CaptureDurationBtn:focus {
+  background-color: #2F8DCC;
+  color: white;
+}
+
+/* MARK: SVG */
+
+svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 1rem;
+  align-items: left;
+  display: inline-block;
+}
+
+#Play, #Pause {
+  fill: #0C8140;
+}
+
+#Play {
+  display: block;
+}
+
+#Pause {
+  display: none;
+}
+
+#PlayPauseBtn:focus #Play, 
+#PlayPauseBtn:focus #Pause {
+  fill: white;
+}
+
+#CapturePgSvg, #Capture, #Reset {
+  stroke: #2f8dcc;
+  fill: none;
+}
+
+#CapturePg:focus #CapturePgSvg, 
+#CaptureDurationBtn:focus #Capture,
+#ResetStopwatchBtn:focus #Reset {
+  stroke: white;
+}
+
+/* MARK:  responsive */
+
+@media only screen and (max-width: 960px) {
+  .timerBtn {
+    width: 5rem;
+    height: 5rem;
+    margin-top: .5rem;
+  }
+  
+  .BtnText {
+    display: none;
+  }
+
+  #PlayPauseBtn {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  #Play {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0;
+  }
+
+  .colorPalette {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .digit {
+    font-size: 1000%;
+  }
+  
+  .txt {
+    font-size: 200%;
+  }
+  
+  #sec {
+    font-size: 500%; }
+}
