@@ -19,7 +19,7 @@
 
 /* MARK: colors */
 
-.colorPalette {
+.Palette {
   height: 4rem;
   width: 4rem;
   border-radius: 5rem;
@@ -29,11 +29,11 @@
   margin-left: 2rem;
 }
 
-.colorPalette:hover {
+.Palette:hover {
   opacity: 60%;
 }
 
-.colorPalette:focus {
+.Palette:focus {
   border-color: black;
 }
 
@@ -67,7 +67,6 @@
 #stopwatch{
   padding-top: 2rem;
   padding-bottom: 1rem;
-  color: #6F7885;
 }
 
 .digit {
@@ -178,6 +177,31 @@ svg {
 #ResetStopwatchBtn:focus #Reset {
   stroke: white;
 }
+/* MARK: Popup */
+
+.notification {
+  display: none;
+  position: fixed;
+  right: 55rem;
+  bottom: 10rem;
+  width: 9rem;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notification p {
+  margin: .5rem;
+}
+
+.notification .close {
+  float: right;
+  cursor: pointer;
+}
 
 /* MARK:  responsive */
 
@@ -208,7 +232,7 @@ svg {
     margin: 0;
   }
 
-  .colorPalette {
+  .Palette {
     width: 3rem;
     height: 3rem;
   }

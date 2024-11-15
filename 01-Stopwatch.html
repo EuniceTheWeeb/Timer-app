@@ -7,21 +7,19 @@
   <link rel="stylesheet" href="01 Stopwatch.css">
 </head>
 <body>
-  <script src="01 Stopwatch.js"></script>
-
 <!-- sidebar for switch to capture pg, time calculator, analog -->  
 <!-- calculator & analog ver optional, must incl capture pg -->
 
 <!-- MARK: pick color palette -->
-  <div class="center" id="Colors">
-    <button class="colorPalette" id="circle1"></button>
-    <button class="colorPalette" id="circle2"></button>
-    <button class="colorPalette" id="circle3"></button>
-    <button class="colorPalette" id="circle4"></button>
-    <button class="colorPalette" id="circle5"></button>
-    <button class="colorPalette" id="circle6"></button>
-    <button class="colorPalette" id="circle7"></button>
-    <button class="colorPalette" id="circle8"></button>
+  <div class="center">
+    <button class="Palette gray" id="circle1"></button>
+    <button class="Palette pink" id="circle2"></button>
+    <button class="Palette violet" id="circle3"></button>
+    <button class="Palette indigo" id="circle4"></button>
+    <button class="Palette purple" id="circle5"></button>
+    <button class="Palette blue" id="circle6"></button>
+    <button class="Palette orange" id="circle7"></button>
+    <button class="Palette green" id="circle8"></button>
   </div>
 
 
@@ -133,6 +131,11 @@
     </div>
   </div>
 
+  <div id="notificationPopup" class="notification">
+    <span class="close" onclick="closeNotification()">&times;</span>
+    <p>Time captured!</p>
+  </div>
 
+  <script src="01 Stopwatch.js"></script>
 </body>
 </html>
